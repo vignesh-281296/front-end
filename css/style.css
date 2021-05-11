@@ -1,3 +1,8 @@
+@font-face {
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-family: roboto;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -5,15 +10,16 @@
 
 body {
   background-color: #eae8e7;
+  font-family: roboto;
 }
 
-.container {
+body .container {
   padding-top: 30px;
   margin: auto;
   width: 70%;
 }
 
-.left-container {
+body .container .left-container {
   display: inline-block;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -21,12 +27,12 @@ body {
   background-color: #5da4d8;
 }
 
-.img_bx img {
+body .container .left-container .img-bx img {
   width: 100%;
   height: 60%;
 }
 
-.contact-icon {
+body .container .left-container .contact-icon {
   margin-top: 15px;
   display: inline-block;
   width: 10%;
@@ -35,7 +41,7 @@ body {
   color: #fff;
 }
 
-.contact-description {
+body .container .left-container .contact-description {
   margin-top: 15px;
   display: inline-block;
   width: 70%;
@@ -44,23 +50,27 @@ body {
   border-bottom: 1px solid #d6dadb;
 }
 
-.personal {
+body .container .left-container .contact-description .personal {
   display: block;
 }
 
-.floor {
+body .container .left-container .contact-description .floor {
   font-size: 10px;
 }
 
-.street {
+body .container .left-container .contact-description .street {
   display: block;
 }
 
-.home-code {
+body .container .left-container .contact-description .home-code {
   font-size: 10px;
 }
 
-.progress_bar .skill_progress {
+body .container .left-container .contact-description .left-side-break {
+  margin-top: 20px;
+}
+
+body .container .left-container .progress_bar .skill_progress {
   width: 85%;
   margin: 15px 0px;
   height: 2px;
@@ -68,7 +78,7 @@ body {
   position: relative;
 }
 
-.progress_bar .skill_progress span {
+body .container .left-container .progress_bar .skill_progress span {
   position: absolute;
   top: 0;
   left: 0;
@@ -76,13 +86,13 @@ body {
   background: #fff;
 }
 
-.right-container {
+body .container .right-container {
   display: inline-block;
   vertical-align: top;
   width: 64%;
 }
 
-.carrier-profile {
+body .container .right-container .carrier-profile {
   margin-left: 20px;
   background-color: #fff;
   line-height: 23px;
@@ -91,84 +101,79 @@ body {
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.carrier-profile .specification {
+body .container .right-container .carrier-profile .specification {
   font-size: 12px;
-  font-family: open-bold;
 }
 
-.carrier-profile-title {
+body .container .right-container .carrier-profile .carrier-profile-title {
   margin-left: 50px;
   color: #817270;
   font-size: 30px;
-  font-family: open-bold;
   font-weight: 600;
 }
 
-.icons {
+body .container .right-container .carrier-profile .icons {
   font-size: 30px;
   color: #767270;
 }
 
-.carrier-info {
+body .container .right-container .carrier-profile .carrier-info {
   margin-left: 15%;
   margin-top: 25px;
 }
 
-.carrier-info .role h5 {
+body .container .right-container .carrier-profile .carrier-info .role h5 {
   font-size: 15px;
   color: #817270;
-  font-family: open-bold;
 }
 
-.content p {
+body .container .right-container .carrier-profile .carrier-info .content p {
   margin-top: 2px;
   color: #dbd1c3;
-  font-family: lato;
   font-size: 15px;
 }
 
-.date span {
+body .container .right-container .carrier-profile .carrier-info .date span {
   color: #97caee;
 }
 
-.hr {
+body .container .right-container .carrier-profile .carrier-info .hr {
   margin-top: 15px;
   border-bottom: 1px solid #d6dadb;
 }
 
-.role {
+body .container .right-container .carrier-profile .carrier-info .role {
   margin-top: 15px;
 }
 
-.break {
-  margin-top: 15px;
-}
-
-.Insterest-icons {
+body .container .right-container .carrier-profile .Insterest-icons {
   color: #5ea6dc;
   font-size: 35px;
-  margin-left: 25px;
+  margin-left: 28px;
   margin-top: 40px;
 }
 
-.Insterest-icons i {
+body .container .right-container .carrier-profile .Insterest-icons i {
   padding-left: 1.7em;
 }
 
-.carrier-profile-interest {
+body .container .right-container .carrier-profile .carrier-profile-interest {
   margin-left: 10%;
   color: #817270;
   font-size: 30px;
-  font-family: open-bold;
   font-weight: 600;
 }
 
-.footer_link a {
+body .container .right-container .carrier-profile .footer_link a {
   text-decoration: none;
   color: #97caee;
 }
 
-.footer_link_2 {
+body .container .right-container .carrier-profile .footer_link_2 {
   margin-left: 25%;
+}
+
+body .container .right-container .break {
+  margin-top: 15px;
 }
 /*# sourceMappingURL=style.css.map */

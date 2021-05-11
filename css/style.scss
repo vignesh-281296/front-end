@@ -1,154 +1,177 @@
+$bg-color: #eae8e7;
+$shadow-color:  rgba(0, 0, 0, 0.1); 
+$sky-blue: #5da4d8;
+$white-color: #fff;
+$left-content-color: #d5e6f0;
+$left-hr-color: #d6dadb;
+$carrier-heading-title: #817270;
+$icons-color: #767270;
+$date-color: #97caee;
+$interest-icon-color: #5ea6dc;
+$link-color: #97caee;
+$carrier-content: #dbd1c3;
+@font-face {
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-family: roboto;
+}
 * {
 	margin: 0px;
 	padding: 0px;
 }
 body {
-	background-color: #eae8e7;
-}
-.container {
-	padding-top: 30px;
-	margin: auto;
-	width: 70%;
-}
-.left-container {
-	display: inline-block;
-	box-shadow: 0 0 15px rgba(0,0,0,0.1);
-	width: 35%;
-	background-color: #5da4d8;
-}
-.img_bx {
-	img {
-		width: 100%;
-		height: 60%;
-	}
-}
-.contact-icon {
-	margin-top: 15px;
-	display: inline-block;
-	width: 10%;
-	vertical-align: top;
-	margin-left: 45px;
-	color: #fff;
-}
-.contact-description {
-	margin-top: 15px;
-	display: inline-block;
-	width: 70%;
-	color: #d5e6f0;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #d6dadb;
-}
-.personal {
-	display: block;
-}
-.floor {
-	font-size: 10px;
-}
-.street {
-	display: block;
-}
-.home-code {
-	font-size: 10px;
-}
-.progress_bar {
-	.skill_progress {
-		width: 85%;
-		margin: 15px 0px;
-		height: 2px;
-		background: #d6dadb;
-		position: relative;
-		span {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			background: #fff;
+	background-color: $bg-color;
+	font-family: roboto;
+	.container {
+		padding-top: 30px;
+		margin: auto;
+		width: 70%;
+		.left-container {
+			display: inline-block;
+			box-shadow: 0 0 15px $shadow-color;
+			width: 35%;
+			background-color: $sky-blue;
+			.img-bx {
+				img {
+					width: 100%;
+					height: 60%;
+				}
+			}
+			.contact-icon {
+				margin-top: 15px;
+				display: inline-block;
+				width: 10%;
+				vertical-align: top;
+				margin-left: 45px;
+				color: $white-color;
+			}
+			.contact-description {
+				margin-top: 15px;
+				display: inline-block;
+				width: 70%;
+				color: $left-content-color;
+				padding-bottom: 20px;
+				border-bottom: 1px solid $left-hr-color;
+				.personal {
+					display: block;
+				}
+				.floor {
+					font-size: 10px;
+				}
+				.street {
+					display: block;
+				}
+				.home-code {
+					font-size: 10px;
+				}
+				.left-side-break {
+					margin-top: 20px;
+				}
+			}
+			.progress_bar {
+				.skill_progress {
+					width: 85%;
+					margin: 15px 0px;
+					height: 2px;
+					background: $left-hr-color;
+					position: relative;
+					span {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+						background: $white-color;
+					}
+				}
+			}
+		}
+		.right-container {
+			display: inline-block;
+			vertical-align: top;
+			width: 64%;
+			.carrier-profile {
+				margin-left: 20px;
+				background-color: $white-color;
+				line-height: 23px;
+				padding: 28px;
+				box-shadow: 0 0 15px $shadow-color;
+				.specification {
+					font-size: 12px;
+					// font-family: open-bold;
+				}
+				.carrier-profile-title {
+					margin-left: 50px;
+					color: $carrier-heading-title;
+					font-size: 30px;
+					// font-family: open-bold;
+					font-weight: 600;
+				}
+				.icons {
+					font-size: 30px;
+					color: $icons-color;
+				}
+				.carrier-info {
+					margin-left: 15%;
+					margin-top: 25px;
+					.role {
+						h5 {
+							font-size: 15px;
+							color: $carrier-heading-title;
+							// font-family: open-bold;
+						}
+					}
+					.content {
+						p {
+							margin-top: 2px;
+							color: $carrier-content;
+							// font-family: lato;
+							font-size: 15px;
+						}
+					}
+					.date {
+						span {
+							color: $date-color;
+						}
+					}
+					.hr {
+						margin-top: 15px;
+						border-bottom: 1px solid $left-hr-color;
+					}
+					.role {
+						margin-top: 15px;
+					}
+				}
+				.Insterest-icons {
+					color: $interest-icon-color;
+					font-size: 35px;
+					margin-left: 28px;
+					margin-top: 40px;
+					i {
+						padding-left: 1.7em;
+					}
+				}
+				.carrier-profile-interest {
+					margin-left: 10%;
+					color: $carrier-heading-title;
+					font-size: 30px;
+					// font-family: open-bold;
+					font-weight: 600;
+				}
+				.footer_link {
+					a {
+						text-decoration: none;
+						color: $link-color;
+					}
+				}
+				.footer_link_2 {
+					margin-left: 25%;
+				}
+			}
+			.break {
+				margin-top: 15px;
+			}
 		}
 	}
 }
-.right-container {
-	display: inline-block;
-	vertical-align: top;
-	width: 64%;
-}
-.carrier-profile {
-	margin-left: 20px;
-	background-color: #fff;
-	line-height: 23px;
-	padding: 28px;
-	box-shadow: 0 0 15px rgba(0,0,0,0.1);
-	.specification {
-		font-size: 12px;
-		font-family: open-bold;
-	}
-}
-.carrier-profile-title {
-	margin-left: 50px;
-	color: #817270;
-	font-size: 30px;
-	font-family: open-bold;
-	font-weight: 600;
-}
-.icons {
-	font-size: 30px;
-	color: #767270;
-}
-.carrier-info {
-	margin-left: 15%;
-	margin-top: 25px;
-	.role {
-		h5 {
-			font-size: 15px;
-			color: #817270;
-			font-family: open-bold;
-		}
-	}
-}
-.content {
-	p {
-		margin-top: 2px;
-		color: #dbd1c3;
-		font-family: lato;
-		font-size: 15px;
-	}
-}
-.date {
-	span {
-		color: #97caee;
-	}
-}
-.hr {
-	margin-top: 15px;
-	border-bottom: 1px solid #d6dadb;
-}
-.role {
-	margin-top: 15px;
-}
-.break {
-	margin-top: 15px;
-}
-.Insterest-icons {
-	color: #5ea6dc;
-	font-size: 35px;
-	margin-left: 25px;
-	margin-top: 40px;
-	i {
-		padding-left: 1.7em;
-	}
-}
-.carrier-profile-interest {
-	margin-left: 10%;
-	color: #817270;
-	font-size: 30px;
-	font-family: open-bold;
-	font-weight: 600;
-}
-.footer_link {
-	a {
-		text-decoration: none;
-		color: #97caee;
-	}
-}
-.footer_link_2 {
-	margin-left: 25%;
-}
+
+
+
