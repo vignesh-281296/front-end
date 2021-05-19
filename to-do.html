@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://ow2.res.office365.com/todo/362889_2.44.2/touch-icon-152x152.png" type="image/x-icon">
     <title>To do List</title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
     crossorigin="anonymous" /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -43,7 +42,7 @@
             </div>
             <div id="element">
                 <ul class="list">
-        
+
                 </ul>
             </div>
             <div class="category">
@@ -53,7 +52,7 @@
                 <!-- <button type="button" id="btn">click me</button> -->
             </div>
         </div>
-        <div class="task-part">
+        <div class="task-part" id="task-section">
             <h3 class="title"></h3>
             <div class="task-box">
                 <i class="fa fa-plus"></i>
@@ -66,29 +65,64 @@
         </div>
         <div class="step">
             <div id="add-steps">
-            <div class="break"></div>
+                <div class="break"></div>
                 <!-- <ul class="add-steps"></ul> -->
-                <input type='checkbox' class='steps-checkbox' id="selectAll"/>
+                <input type='checkbox' class='steps-checkbox' id="selectAll" />
                 <span class="step-title"></span>
                 <i class='far fa-star important-start'></i>
                 <div class="step-list">
                     <ul class="steps"></ul>
                 </div>
-                <div class="step-box">    
-                <i class="fa fa-plus"></i>
-                <input type="text" class="step-text-box" name="tick" placeholder="Next Step"/>
-                <span class="btn">Add</span>
+                <div class="step-box">
+                    <i class="fa fa-plus"></i>
+                    <input type="text" class="step-text-box" name="tick" placeholder="Next Step" />
+                    <span class="btn">Add</span>
+                </div>
+                <div class="break"></div>
             </div>
-            <div class="break"></div>
+            <div class="steps-to-myday">
+                <div class="break"></div>
+                <i class="fa fa-sun step-icons"></i>
+                <span class="step-content">Add to My Day</span>
+                <div class="break"></div>
             </div>
+            <div class="step-type">
+                <div class="break"></div>
+                <div class="step-reminder">
+                    <i class="fa fa-bell step-icons"></i>
+                    <span class="step-content">Remind me</span>
+                </div>
+                <div class="step-reminder">
+                    <i class="fa fa-calendar-alt step-icons"></i>
+                    <span class="step-content">Add due date</span>
+                </div>
+                <div class="repeat">
+                    <i class="fas fa-calendar step-icons"></i>
+                    <span class="step-content">Repeat</span>
+                </div>
+                <div class="break"></div>
             </div>
-            <!-- <div class="step-textbox">
+            <div class="steps-to-myday">
+                <div class="break"></div>
+                <i class="fa fa-sun step-icons"></i>
+                <span class="step-content">Pick a Category</span>
+                <div class="break"></div>
+            </div>
+            <div class="steps-to-myday">
+                <div class="break"></div>
+                <i class="fa fa-paperclip step-icons"></i>
+                <span class="step-content">Add File</span>
+                <div class="break"></div>
+            </div>
+        </div>
+        <!-- <div class="step-textbox">
                 <ul></ul>
                 <input type="text" />
             </div> -->
-        </div>
     </div>
-   
+    </div>
+
     <script src="js/to-do.js"></script>
 </body>
+
 </html>

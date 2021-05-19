@@ -40,11 +40,12 @@
     const addStepTextBox = document.getElementsByClassName("step-text-box")[0];
     //const selectCheckbox = document.querySelector('.steps-checkbox');
     function init() { 
-        document.getElementsByClassName("task-part")[0].style.visibility = 'hidden';
+        document.getElementById("task-section").style.visibility = 'hidden';
         document.getElementsByClassName("step")[0].style.visibility = 'hidden';
+        document.getElementsByClassName("step")[0].style.display = 'none';
         categoryList();
         categoryText.addEventListener("keypress", function(event){
-            if (event.key === 'Enter') {
+            if ('Enter' === event.key) {
                 addCategory();
             } 
         }); 
@@ -56,7 +57,7 @@
         });
 
         taskText.addEventListener("keypress", function(event){
-            if (event.key === 'Enter') {
+            if ('Enter' === event.key) {
                 addTask();
             } 
         }); 
@@ -124,8 +125,9 @@
      * task part
      */
     function task(event) {
-        document.getElementsByClassName("task-part")[0].style.visibility = 'visible';
-        document.getElementsByClassName("step")[0].style.visibility = 'hidden';
+        document.getElementById("task-section").style.visibility = 'visible';
+        //document.getElementsByClassName("step")[0].style.visibility = 'hidden';
+        document.getElementsByClassName("step")[0].style.display = 'none';
         console.log(event.target);
         categoryId = event.target.id;
         let heading = document.getElementsByClassName("title")[0];
@@ -157,8 +159,7 @@
         const checkBoxButton = document.createElement("input");
         checkBoxButton.type = 'checkbox';
         checkBoxButton.name = 'tick';
-        checkBoxButton.className = 'steps-checkbox';
-       // checkBoxButton.id = 'checkAll';
+        checkBoxButton.className = 'task-checkbox';
         taskLi.insertBefore(checkBoxButton, taskLi.firstChild);
         const span = document.createElement("span");
         span.className = "assigned-task-value";
@@ -188,16 +189,18 @@
         document.getElementsByClassName("assign-task")[0].value = "";
     }
 
+    /*
+     * step part
+     */
     function step(event) {
         flag = 0;
         taskId = event.target.id;
         document.getElementsByClassName("step")[0].style.visibility = 'visible';
-       // alert(event.target.firstChild);
+        document.getElementsByClassName("step")[0].style.display = 'inline-block';
         console.log(event.target.firstChild);
         let taskValue = event.target.firstChild;
-        let taskPart = document.getElementsByClassName("task-part")[0];
-        taskPart.classList.toggle('task-part-1');
-        //taskPart.className = 'task-part-1';
+        let taskPart = document.getElementById("task-section");
+        taskPart.className = 'task-part-1';
         let stepTitle = document.getElementsByClassName("step-title")[0];
         stepTitle.innerHTML = taskValue.textContent;
         const stepUl = document.getElementsByClassName('steps')[0];
