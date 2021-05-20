@@ -1,0 +1,297 @@
+$while-color: #fff;
+$blue-color: #0078D7;
+$sky-blue-color: #5385f0;
+$light-blue: #c3dcf7;
+$white-smoke: #f4f4f4;
+$dolphin: #767678;
+$gray: #e5e5e5;
+* {
+	top: 0;
+	left: 0;
+}
+body {
+	font-family: "Segoe","Segoe UI","Arial","sans-serif";
+}
+nav {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $blue-color;
+	overflow: auto;
+	height: auto;
+    .left-links {
+        flex: 1 1 200px;
+    }
+    .links {
+        display: inline-block;
+        text-align: center;
+        padding: 14px;
+        color: $while-color;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bolder;
+        span {
+            width: 30px;
+            height: 30px;
+            border: 1px solid $while-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+    }
+    .searchContainer {
+        margin-left: 30%;
+    }
+    .searchIcon {
+        position: relative;
+        left: 30px;
+        z-index: 999;
+        color: $sky-blue-color;
+    }
+    .search-box {
+        width: 25%;
+        height: 35px;
+        border: 0px;
+        border-radius: 3px;
+        background-color: $light-blue;
+        cursor: pointer;
+        &:hover {
+            background-color: $while-color;
+        }
+    }
+}
+.left-side-bar {
+	display: inline-block;
+	margin-top: 40px;
+	margin-left: 0px;
+	background-color: $white-smoke;
+	width: 20%;
+	height: 635px;
+    overflow: auto;
+    .left-arrow {
+        i {
+            margin-top: 30px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+    }
+    #category-element {
+        .list {
+            padding-left: 20px;
+        }
+        ul {
+            li {
+                &:hover {
+                    background-color: $while-color;
+                }
+            }
+        }
+    }
+    #icons {
+        padding-right: 1.2em;
+        color: $dolphin;
+    }
+    #left-side-arrow-icon {
+        color: $dolphin;
+    }
+    .category {
+        margin-left: 15px;
+        i {
+            color: $dolphin;
+        }
+        &:hover {
+            background-color: $while-color;
+        }
+        input {
+            outline: none;
+            height: 40px;
+            border: 0px;
+            margin-left: 15px;
+            background-color: $white-smoke;
+            &:hover {
+                background-color: $while-color;
+            }
+        }
+    }
+    .side-bar-icon {
+        font-size: 20px;
+        font-weight: 200;
+    }
+    .list-name-1 {
+        display: none;
+    }
+}
+li {
+    list-style: none;
+    color: #34373d;
+    line-height: 50px;
+    cursor: pointer;
+}   
+
+.task-part {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 50px;
+	margin-left: 30px;
+	width: 75%;
+	h3 {
+		color: $blue-color;
+	}
+	.assign-task {
+		outline: none;
+		border: 0;
+		margin-left: 20px;
+	}
+}
+.task-part-1 {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 50px;
+	margin-left: 30px;
+	width: 50%;
+	height: 620px;
+	box-shadow: 5px 0 10px -5px rgba(0,0,0,0.1);
+	.assign-task {
+		outline: none;
+		border: 0;
+		margin-left: 20px;
+	}
+}
+.task-value {
+	ul {
+		padding-left: 0px;
+		li {
+			&:hover {
+				background-color: #f4f6ff;
+			}
+		}
+	}
+	span {
+		font-size: 15px;
+		margin-top: 10px;
+		left: 0;
+	}
+}
+.task-box {
+	padding-bottom: 15px;
+	border-bottom: 1px solid $gray;
+}
+#assigned-task {
+	li {
+		padding-bottom: 15px;
+		border-bottom: 1px solid $gray;
+		input[type="checkbox"] {
+			vertical-align: middle;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			cursor: pointer;
+			padding-left: 0px;
+		}
+		span {
+			margin-left: 20px;
+		}
+	}
+}
+input[type="checkbox"] {
+	&:checked {
+		+ {
+			span {
+				text-decoration: line-through;
+			}
+		}
+	}
+}
+.important {
+	margin-top: 25px;
+	float: right;
+	padding-right: 20px;
+}
+.step {
+	display: inline-block;
+	width: 27%;
+	vertical-align: top;
+	margin-top: 30px;
+	margin-left: 5px;
+    // overflow: scroll;
+}
+#add-steps {
+	margin-top: 30px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.1);
+	span {
+		padding-left: 1em;
+	}
+}
+.steps-checkbox {
+	margin-left: 20px;
+}
+.important-start {
+	padding-right: 15px;
+	margin-top: 10px;
+	float: right;
+}
+.step-box {
+	margin-left: 20px;
+}
+.step-text-box {
+	border: none;
+	outline: none;
+	margin-left: 15px;
+}
+.btn {
+	padding-right: 15px;
+	float: right;
+	color: $blue-color;
+	cursor: pointer;
+}
+.step-list {
+	ul {
+		padding-left: 18px;
+		li {
+			&:hover {
+				background-color: $gray;
+			}
+		}
+	}
+}
+.steps-value {
+	width: 24em;
+	border-bottom: 1px solid $gray;
+}
+.break {
+	padding-top: 20px;
+}
+.delete-icon {
+	float: right;
+	margin-top: 20px;
+	padding-right: 15px;
+}
+.steps-to-myday {
+	margin-top: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.step-icons {
+	margin-left: 20px;
+	color: $dolphin;
+}
+.step-content {
+	padding-left: 18px;
+	color: $dolphin;
+}
+.step-type {
+	margin-top: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.1);
+	padding-bottom: 10px;
+	border-bottom: 1px solid $gray;
+}
+.step-reminder {
+	margin-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $gray;
+}
+.repeat {
+	margin-top: 20px;
+}
