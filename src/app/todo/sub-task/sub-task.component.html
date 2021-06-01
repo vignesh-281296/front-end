@@ -1,0 +1,111 @@
+<div class="sub-task-part">
+    <div class="row">
+        <div class="col-md-2 mt-3 task-part-checkbox">
+            <input type="checkbox" class="ml-3"/>
+        </div>
+        <div class="col-md-7 mt-3">
+            <span class="task-text">{{ taskName }}</span>
+        </div>
+        <div class="col-md-3 mt-3">
+            <i class="far fa-star important ml-3"></i>
+        </div>
+    </div>
+    <div class="steps mt-3">
+        <div class="step-list" *ngFor="let subTask of subTasks">
+            <div class="row">
+                <div class="col-md-2 sub-task-checkbox">
+                    <input type="checkbox" class="ml-3"/>
+                </div>
+                <div class="col-md-7 text">
+                    <span class="sub-task-text">{{ subTask.name }}</span>
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-times ml-3"></i>
+                </div>
+            </div>
+            <div class="hr px-1"></div>
+        </div>
+    </div>
+    <div class="add-steps mt-4">
+        <div class="row">
+            <div class="col-md-2">
+                <i class="fa fa-plus ml-3"></i>
+            </div>
+            <div class="col-md-7 pb-3">
+                <input type="text" class="step-text-box" [(ngModel)] = "name" (keyup.enter) = "onClick()" placeholder="Add Step" />
+            </div>
+        </div>
+    </div>
+    <!-- <div class="bottom-space"></div> -->
+</div>
+<div class="sub-task-part">
+    <div class="my-day">
+        <div class="row">
+            <div class="col-md-2 mt-3">
+                <i class="fa fa-sun step-icons ml-3"></i>
+            </div> 
+            <div class="col-md-7 mt-3">
+                <span class="sub-task-text">Add to My Day</span>
+            </div>
+        </div>
+        <div class="bottom-space"></div>
+    </div>
+</div>
+<div class="sub-task-part">
+    <div class="reminder">
+        <div class="row">
+            <div class="col-md-2 mt-3">
+                <i class="fa fa-bell step-icons ml-3"></i>
+            </div> 
+            <div class="col-md-7 mt-3">
+                <span class="sub-task-text">Reminder Me</span>
+            </div>
+        </div>
+        <div class="hr px-1"></div>
+
+        <div class="row">
+            <div class="col-md-2 mt-2">
+                <i class="fas fa-calendar step-icons ml-3"></i>
+            </div> 
+            <div class="col-md-7 mt-2">
+                <span class="sub-task-text">Add a due date</span>
+            </div>
+        </div>
+        <div class="hr px-1"></div>
+        <div class="row">
+            <div class="col-md-2 mt-2">
+                <i class="fa fa-sun step-icons ml-3"></i>
+            </div> 
+            <div class="col-md-7 mt-2">
+                <span class="sub-task-text">Repeat</span>
+            </div>
+        </div>
+        <div class="bottom-space"></div>
+    </div>
+</div>
+<div class="sub-task-part">
+    <div class="pick-category">
+        <div class="row">
+            <div class="col-md-2 mt-3">
+                <i class="fa fa-tag step-icons ml-3"></i>
+            </div> 
+            <div class="col-md-7 mt-3">
+                <span class="sub-task-text">Pick Category</span>
+            </div>
+        </div>
+        <div class="bottom-space"></div>
+    </div>
+</div>
+<div class="sub-task-part">
+    <div class="add-file">
+        <div class="row">
+            <div class="col-md-2 mt-3">
+                <i class="fa fa-paperclip step-icons ml-3"></i>
+            </div> 
+            <div class="col-md-7 mt-3">
+                <span class="">Add File</span>
+            </div>
+        </div>
+        <div class="bottom-space"></div>
+    </div>
+</div>

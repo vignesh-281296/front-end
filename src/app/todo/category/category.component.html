@@ -1,0 +1,19 @@
+
+<!-- <div class="row"> -->
+    <div class="category-container">
+        <i class="fa fa-chevron-right ml-4 mt-3" id="left-side-arrow-icon"></i>
+        <ul class="category-value mt-3">
+            <li *ngFor = "let values of listValue" class="ml-4">
+                <i class="{{ values.icon }} icon"></i> 
+                <span class="ml-3" id="{{ values.id }}" (click)="getCategoryValue(values.id)">
+                    {{ values.name }}
+                </span>
+            </li>
+        </ul>
+        <div class="form-group ml-4 mt-4">
+            <i class="fa fa-plus"></i>
+            <input type="text" class="ml-3 catagory-text-box" [(ngModel)] = "name" (keyup.enter) = "onClick()" placeholder="New list"/>
+        </div>
+    </div>
+
+

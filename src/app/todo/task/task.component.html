@@ -1,0 +1,25 @@
+<div [ngStyle]="{'box-shadow': !taskStyle ? '5px 0 10px -5px rgba(0,0,0,0.1)' : '' }" class="middle-part">
+    <div class="task">
+        <h4 class="category-title ml-1 mt-3">{{ category }}</h4>
+    </div>
+
+<div class="form-group ml-1 mt-4">
+    <i class="fa fa-plus"></i>
+    <input type="text" class = "task-text-box ml-3" [(ngModel)] = "name" (keyup.enter) = "onClick()" placeholder="New Task" />
+</div>
+
+<div class="task-part">
+    <ul class="task-value ml-1">
+        <li *ngFor = "let taskList of taskLists">
+            <div class="round">
+                <input type="checkbox" class="checked-round"  data-toggle="tooltip" data-placement="top" title="Mark as Completed" /><span class="ml-4" id="{{taskList.taskId}}" (click) = "getTaskValue(taskList.taskId)">{{ taskList.name }}</span> <i class="far fa-star important float-right mt-2 px-3"></i>
+            </div>          
+        </li>
+    </ul>
+</div>
+</div>
+<!-- <div class="background-lines"></div> -->
+
+
+
+

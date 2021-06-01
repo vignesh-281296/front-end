@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="row mx-0">
+    <div class="col-md-3 pl-0">
+        <app-category></app-category>
+    </div>
+    <div [ngClass] ="{'col-md-9': className, 'col-md-6' : !className }">
+        <app-task *ngIf="categoryId"></app-task>
+    </div>
+    <div class="col-md-3">
+        <app-sub-task *ngIf = "subTaskShow"></app-sub-task>
+    </div>
+</div>
+

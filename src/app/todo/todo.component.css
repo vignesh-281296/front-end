@@ -1,0 +1,18 @@
+
+.row{
+    overflow-x: visible; 
+    overflow-y: scroll;
+}
+@media (min-width: 768px) {
+.col-md-6 {
+    flex: 0 0 54%;
+    max-width: 54%;
+}
+}
+@media (min-width: 768px) {
+
+    .col-md-3  {
+        max-width: 20%;
+    }
+
+}
